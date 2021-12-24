@@ -1,4 +1,4 @@
-package me.scb.pkmoves.pkmoves;
+package me.scb.pkmoves.pkmoves.AirTendril;
 
 import com.projectkorra.projectkorra.GeneralMethods;
 import com.projectkorra.projectkorra.ability.AddonAbility;
@@ -85,7 +85,6 @@ public final class AirTendril extends AirAbility implements AddonAbility, ComboA
                     Vector v = new Vector(Math.cos(angle) * radius, step * grow, Math.sin(angle) * radius);
                     rotateAroundAxisX(v, (location.getPitch() + 90) * degreesToRadians);
                     rotateAroundAxisY(v, -location.getYaw() * degreesToRadians);
-
                     location.add(v);
                     playAirbendingParticles(location,particles);
                     location.subtract(v);
