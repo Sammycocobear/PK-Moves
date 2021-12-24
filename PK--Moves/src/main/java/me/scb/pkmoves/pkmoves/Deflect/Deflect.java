@@ -174,11 +174,6 @@ public final class Deflect extends ChiAbility implements AddonAbility {
 
     @Override
     public String getDescription() {
-
-        return "ChiBlockers focuse their senses into their eyes, focusing on their surroundings. If there is a nearby Arrow or Snowball the  ";
-
+        return "Chi Blocker focuse their senses into their eyes, focusing on their surroundings. If there is a Projectile near the Chi Blocker , the Chi Blocker will deflect them ";
     }
-
-
 }
-
