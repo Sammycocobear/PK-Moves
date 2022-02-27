@@ -169,11 +169,11 @@ public final class Deflect extends ChiAbility implements AddonAbility {
     }
     @Override
     public String getInstructions() {
-        return "If Deflect is disabled <Left Click> to enable, if it is enabled <LeftC Click> to disable";
+        return "If Deflect is disabled <Left Click> to enable, if it is enabled <Left Click> to disable";
     }
 
     @Override
     public String getDescription() {
-        return "Chi Blocker focus their senses into their eyes, focusing on their surroundings. If there is a Projectile near the Chi Blocker , the Chi Blocker will deflect them ";
+        return "Chi Blocker focus their senses into their eyes, focusing on their surroundings. If there is a Projectile near the Chi Blocker , the Chi Blocker will deflect them";
     }
 }
