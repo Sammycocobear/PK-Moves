@@ -10,17 +10,19 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 
 public class HoverBoardListener implements Listener {
+
+    
     @EventHandler
     public void onClick(PlayerInteractEvent e){
         if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) return;
         Player p = e.getPlayer();
         BendingPlayer bPlayer = BendingPlayer.getBendingPlayer(p);
-        CoreAbility slotAbility = bPlayer.getBoundAbility();
-        if (!bPlayer.canBend(slotAbility)  || CoreAbility.hasAbility(p,slotAbility.getClass())) return;
-        if (slotAbility.getName().equalsIgnoreCase("HoverBoard")){
+        if (bPlayer.getBoundAbilityName().equalsIgnoreCase("HoverBoard")){
             new HoverBoard(p);
         }
     }
+
+
     @EventHandler
     public void onSneak(PlayerToggleSneakEvent e){
         Player player = e.getPlayer();

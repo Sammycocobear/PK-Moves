@@ -4,6 +4,7 @@ import com.projectkorra.projectkorra.GeneralMethods;
 import com.projectkorra.projectkorra.ProjectKorra;
 import com.projectkorra.projectkorra.ability.AddonAbility;
 import com.projectkorra.projectkorra.ability.ChiAbility;
+import com.projectkorra.projectkorra.ability.CoreAbility;
 import com.projectkorra.projectkorra.configuration.ConfigManager;
 import com.projectkorra.projectkorra.util.DamageHandler;
 import org.bukkit.*;
@@ -60,7 +61,7 @@ public class HoverBoard extends ChiAbility implements AddonAbility {
         jumpVelocity = config.getDouble(path + "JumpVelocity");
         shootHitbox = config.getDouble(path + "ShootHitbox");
 
-
+        if (CoreAbility.hasAbility(player,getClass()) || !bPlayer.canBend(this)) return;
         int x = 270;
         for (int i = 0; i < 3; i++) {
             stand = (ArmorStand) player.getLocation().getWorld().spawnEntity(player.getLocation(), EntityType.ARMOR_STAND);
